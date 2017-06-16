@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">mircale</string>
+    <string name="waiting">加载中，请稍后...</string>
 </resources>
