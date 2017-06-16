@@ -59,7 +59,7 @@ public class LoadingDialog extends Dialog {
     public void dismiss() {
         super.dismiss();
         mUnbinder.unbind();
-        //nihaowertgg
+
     }
 }
 
