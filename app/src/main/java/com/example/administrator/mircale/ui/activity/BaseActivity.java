@@ -6,12 +6,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.administrator.mircale.ui.view.MvpView;
+import com.example.administrator.mircale.view.LoadingDialog;
 
 /**
  * Created by wangchunxue on 2017/6/15.
  */
 
 public class BaseActivity extends AppCompatActivity implements MvpView {
+    protected  LoadingDialog mDialog;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
@@ -21,12 +23,17 @@ public class BaseActivity extends AppCompatActivity implements MvpView {
 
     @Override
     public void startLoading() {
-
+        if (mDialog == null) {
+            mDialog = new LoadingDialog(this);
+        }
+        mDialog.show();
     }
 
     @Override
     public void hideLoading() {
-
+        if (mDialog != null) {
+            mDialog.dismiss();
+        }
     }
 
     @Override
