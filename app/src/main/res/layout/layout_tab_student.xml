@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img_student"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x25"
+            android:src="@drawable/bg_home_student_selector"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manager_student"
+            android:textColor="@drawable/color_txt_tab_selector"
+            android:textSize="@dimen/s9"/>
+
+</LinearLayout>

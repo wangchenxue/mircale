@@ -14,12 +14,13 @@ import com.example.administrator.mircale.view.LoadingDialog;
 
 public class BaseActivity extends AppCompatActivity implements MvpView {
     protected  LoadingDialog mDialog;
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        initView();
-        initData();
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
     }
+
 
     @Override
     public void startLoading() {
@@ -41,11 +42,11 @@ public class BaseActivity extends AppCompatActivity implements MvpView {
 
     }
 
-    private void initView() {
+    protected void initView() {
 
     }
 
-    private void initData() {
+    protected void initData() {
 
     }
 

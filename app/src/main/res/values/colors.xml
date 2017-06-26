@@ -8,4 +8,9 @@
     <color name="gray13">#21fefdfd</color>
     <color name="gray">#fefdfd</color>
     <color name="transparent">#00ffffff</color>
+    <color name="tab_left">#a16ef9</color>
+    <color name="tab_right">#756ff4</color>
+    <color name="txt_yellow">#f4f578</color>
+    <color name="txt_black02">#020000</color>
+
 </resources>

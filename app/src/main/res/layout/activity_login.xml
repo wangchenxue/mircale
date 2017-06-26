@@ -18,28 +18,30 @@
         android:padding="@dimen/x40"
         android:layout_centerInParent="true"
         >
+
         <EditText
             android:id="@+id/et_username"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/x35"
             android:textColor="@color/gray"
             android:textColorHint="@color/gray"
             android:background="@color/gray13"
-            android:hint="请输入用户名"
-            android:textSize="@dimen/x11"
+            android:hint="@string/input_username"
+            android:textSize="@dimen/s11"
             android:paddingLeft="@dimen/x25"
             />
         <EditText
             android:id="@+id/et_pws"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/x35"
             android:textColor="@color/gray"
             android:textColorHint="@color/gray"
             android:background="@color/gray13"
             android:layout_marginTop="@dimen/x33"
-            android:hint="请输入密码"
-            android:textSize="@dimen/x11"
+            android:hint="@string/input_pwd"
+            android:textSize="@dimen/s11"
             android:paddingLeft="@dimen/x25"
+            android:inputType="textPassword"
             />
     </LinearLayout>
 
@@ -51,9 +53,9 @@
         android:layout_marginLeft="@dimen/x55"
         android:layout_marginRight="@dimen/x55"
         android:layout_marginTop="@dimen/x60"
-        android:textSize="@dimen/x14"
+        android:textSize="@dimen/s14"
         android:textColor="@color/gray"
-        android:text="登录"
+        android:text="@string/txt_login"
         android:background="@drawable/select_bg_login"
         android:gravity="center"
         />
