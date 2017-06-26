@@ -29,7 +29,7 @@
         <!-- 是否有覆盖 -->
         <item name="android:windowContentOverlay">@null</item>
         <!-- 重要，Dialog进出的显示动画 -->
-        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
 
     </style>
 

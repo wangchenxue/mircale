@@ -11,7 +11,9 @@ import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.TimePickerView;
 import com.example.administrator.mircale.R;
 import com.example.administrator.mircale.api.ProvinceSelectCallback;
+import com.example.administrator.mircale.utils.LogUtils;
 import com.example.administrator.mircale.utils.ViewShowUtils;
+import com.example.administrator.mircale.view.MyDialog;
 
 import java.util.Date;
 
@@ -24,7 +26,7 @@ import butterknife.Unbinder;
  * Created by 王春雪 on 2017/6/22.
  */
 
-public class StudentFragment extends BaseFragment implements TimePickerView.OnTimeSelectListener, ProvinceSelectCallback {
+public class StudentFragment extends BaseFragment implements TimePickerView.OnTimeSelectListener, ProvinceSelectCallback, View.OnClickListener, MyDialog.MakesureListener {
 
     @BindView(R.id.name)
     TextView mName;
@@ -59,7 +61,8 @@ public class StudentFragment extends BaseFragment implements TimePickerView.OnTi
     public void onClick(View view) {
         /*ViewShowUtils.showTimePicker(getActivity(),StudentFragment.this
         );  */
-        new ViewShowUtils().showProvince(getContext(),this);
+       ViewShowUtils.showMyDialog(getContext(),
+              "&*（&&………………ＦＧＧＢＹＨ恢复和安抚东风街化蝶飞",this);
     }
 
     @Override
@@ -71,5 +74,13 @@ public class StudentFragment extends BaseFragment implements TimePickerView.OnTi
     @Override
     public void getProvince(String string) {
         mName2.setText(string);
+    }
+
+
+    @Override
+    public void domakesure() {
+        LogUtils.logi("main","***");
+        ViewShowUtils.dismissDialog();
+
     }
 }

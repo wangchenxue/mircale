@@ -23,6 +23,7 @@
     <dimen name="x60">60dp</dimen>
     <dimen name="x100">100dp</dimen>
     <dimen name="x170">170dp</dimen>
+    <dimen name="x280">280dp</dimen>
 
 
 </resources>

@@ -12,6 +12,8 @@
     <string name="qualified_rate">合格率</string>
     <string name="data_close_class">距离培训班关闭</string>
     <string name="data_close_test">距离考试关闭</string>
+    <string name="cancle">取消</string>
+    <string name="makesure">确定</string>
 
 
 </resources>

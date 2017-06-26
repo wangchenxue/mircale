@@ -7,6 +7,7 @@ import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.TimePickerView;
 import com.example.administrator.mircale.api.ProvinceSelectCallback;
 import com.example.administrator.mircale.entity.ProvinceData;
+import com.example.administrator.mircale.view.MyDialog;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -23,9 +24,10 @@ import java.util.Date;
 public class ViewShowUtils {
     private static TimePickerView mPvTime;
     static boolean[] types = new boolean[]{true, true, true, false, false, false};//年月日时分秒的显示
-    private ArrayList<ProvinceData> options1Items = new ArrayList<>();
-    private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();
-    private ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<>();
+    private ArrayList<ProvinceData> options1Items = new ArrayList<>();//省
+    private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();//市
+    private ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<>();//县
+    private static MyDialog mMyDialog;
 
     public static void showTimePicker(Context context, TimePickerView.OnTimeSelectListener listener) {
         mPvTime = new TimePickerView.Builder(context, listener)
@@ -149,4 +151,33 @@ public class ViewShowUtils {
 
     }
 
+    /**
+     * 显示dialog，带标题
+     * @param context
+     * @param title
+     * @param content
+     * @param makesureListerner
+     */
+    public static void showMyDialog(Context context,String title, String content,
+                                    MyDialog.MakesureListener makesureListerner){
+        mMyDialog = new MyDialog(context);
+        mMyDialog.showDialog(title,content,makesureListerner);
+
+    }
+
+    /**
+     * 不显示标题的dialog
+     * @param context
+     * @param content
+     * @param makesureListerner
+     */
+    public static void showMyDialog(Context context,String content,
+                                    MyDialog.MakesureListener makesureListerner){
+        mMyDialog = new MyDialog(context);
+        mMyDialog.showDialog(content,makesureListerner);
+
+    }
+    public static void dismissDialog(){
+        mMyDialog.dismiss();
+    }
 }
